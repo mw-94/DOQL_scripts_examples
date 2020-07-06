@@ -1,5 +1,5 @@
 /*
-Built initially for DXC, but is a concise app services query.
+Built to be a concise report of application components with connections.
 This leverages services that have been discovered with an App Comp, and joins their clients as the "dependents".
 */
 select distinct

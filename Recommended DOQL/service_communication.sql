@@ -1,3 +1,6 @@
+/*
+Query for all discovered connections to service instances.
+*/
 select
 ld.name "Listening Device",
 ag.name "Affinity Group",

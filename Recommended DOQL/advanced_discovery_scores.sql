@@ -1,3 +1,6 @@
+/*
+DOQL for detailed data of Devices related to Discovery Scores and Job Scores.
+*/
 select 
 ds.discoveryscores_pk "Discovery Score ID",
 vsd.vserverdiscovery_pk "Job ID",
