@@ -1,7 +1,7 @@
 /* getting all view_deviceaffinity_v2 records for specific Affinity Group chart 
     2/28/2020
       Data records should support default Affinity Group Chart 
-      Note: Will need the affinitygroup_pk replaced before running report
+      Note: Will need to add &affinity_group_pk=<affinity group pk or id> to the Saved DOQL URL.
 */
 WITH RECURSIVE 
   impact AS ( -- impact report
@@ -36,7 +36,7 @@ src AS (
       primary_device_fk,
       report_type_id
     FROM view_affinitygroup_v2
-    WHERE affinitygroup_pk = xxx -- specify Affinity Group pk
+    WHERE affinitygroup_pk = {affinity_group_pk} -- specify Affinity Group pk
 )
 SELECT Distinct
   dependency.*

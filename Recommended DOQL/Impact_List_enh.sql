@@ -1,13 +1,14 @@
 /* Get report to Support Impact List */
 /* Inline view of  Target service and Device data  - Filters down to just the records needed   
-        Change xxxxx or xxxxy to the device id of the focused host before running          */
+        Change device_pk_1 or device_pk_2 to the device id of the focused host before running or
+use &device_pk_1=device_id as parameters.         */
 With 
     src as (
        Select Distinct
         dev.device_pk,
 		dev.name
        From view_device_v1 as dev
-         Where dev.device_pk IN ('xxxxx', 'xxxxy') /* specify device pk - Can put as many entries as long as each one is put in single quotes and separated by a comma  */
+         Where dev.device_pk IN ('{device_pk_1}', '{device_pk_2}') /* specify device pk - Can put as many entries as long as each one is put in single quotes and separated by a comma  */
     ),	 
      target_host as (
         Select Distinct		   
@@ -99,4 +100,3 @@ With
 	  listener_port ASC, 
 	  service ASC, 
 	  client_host ASC	 
-     	   

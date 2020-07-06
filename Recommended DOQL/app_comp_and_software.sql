@@ -13,4 +13,3 @@ left join view_device_v1 d on d.device_pk = ac.device_fk
 left join view_ipaddress_v1 ip on ip.device_fk = d.device_pk
 left join view_softwareinuse_v1 si on si.appcomp_fk = ac.appcomp_pk
 left join view_software_v1 s on s.software_pk = si.software_fk
-where lower(ac.name) like '%microsoft sql%'
